@@ -1,11 +1,4 @@
-* {
-    box-sizing: border-box;
-}
 
-html,
-body {
-    height: 100%;
-}
 
 a,
 button {
@@ -18,14 +11,40 @@ button {
     }
 }
 
-body {
-    display: grid;
-    place-items: center;
-    margin: 0;
-    padding: 0 24px;
+
+.page {
+    position:relative;
+    left:240px;
+    margin-right:240px;
+
+    min-height: 100%;
+    
     background-image: url("low-poly-grid-haikei.svg");
+    background-repeat: no-repeat;
     background-size: cover;
     animation: pan 6s infinite alternate linear;
+   
+    display: grid;
+    place-items: center;
+
+    padding-top:20vh;
+    padding-bottom:20vh;
+    padding-right:0;
+    padding-left:0;
+   
+
+}
+
+
+
+.login-card {
+    align-items: center;
+      justify-content: center;
+    width: 100%;
+    padding: 70px 30px 44px;
+    border-radius: 24px;
+    background: #ffffff;
+    text-align: center;
 }
 
 @media (width>=500px) {

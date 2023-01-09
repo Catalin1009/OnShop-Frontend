@@ -4,20 +4,16 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
         <div class="position-sticky">
             <div class="list-group list-group-flush mx-3 mt-4">
-                <a routerLink="/home" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
-                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Home</span>
-                </a>
-                <a href="/home" routerLink="/home" class="list-group-item list-group-item-action py-2 ripple active">
+             
+                <a href="/home" routerLink="/home" class="list-group-item list-group-item-action py-2 ripple active" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Home</span>
                 </a>
-                <a href="/login" routerLink="/login" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                <a href="/login" routerLink="/login" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
                     <i class="fas fa-users fa-fw me-3"></i><span>Login</span></a>
 
-                <a href="/register" routerLink="/register" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                <a href="/register" routerLink="/register" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
                     <i class="fas fa-users fa-fw me-3"></i><span>Register</span></a>
-                <a href="/product" routerLink="/product" class="list-group-item list-group-item-action py-2 ripple active">
-                    <i class="fas fa-chart-area fa-fw me-3"></i><span>Produs</span>
-                </a>
+                
             </div>
         </div>
     </nav>
