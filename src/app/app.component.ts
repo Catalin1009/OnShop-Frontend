@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {UsersService} from './users.service'
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,9 +7,6 @@ import {UsersService} from './users.service'
 })
 export class AppComponent {
   title = 'OnShop-Frontend';
-  constructor(private user:UsersService){
-    this.user.getData().subscribe(data=>{
-      console.warn(data)
-    })
-  }
+
+  
 }
