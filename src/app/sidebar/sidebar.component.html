@@ -4,26 +4,26 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
         <div class="position-sticky">
             <div class="list-group list-group-flush mx-3 mt-4">
-             
+
                 <a href="/home" routerLink="/home" class="list-group-item list-group-item-action py-2 ripple active" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Home</span>
                 </a>
-                <a href="/jucarii" routerLink="/jucarii" class="list-group-item list-group-item-action py-2 ripple active">
+                <a href="/jucarii" routerLink="/jucarii" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Jucarii</span>
                 </a>
-                <a href="/haine" routerLink="/haine" class="list-group-item list-group-item-action py-2 ripple active">
+                <a href="/haine" routerLink="/haine" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Haine</span>
                 </a>
-                <a href="/televizoare" routerLink="/televizoare" class="list-group-item list-group-item-action py-2 ripple active">
+                <a href="/televizoare" routerLink="/televizoare" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Televizoare</span>
                 </a>
-                <a href="/electrocasnice" routerLink="/electrocasnice" class="list-group-item list-group-item-action py-2 ripple active">
+                <a href="/electrocasnice" routerLink="/electrocasnice" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Electrocasnice</span>
                 </a>
-                <a href="/calculatoare" routerLink="/calculatoare" class="list-group-item list-group-item-action py-2 ripple active">
+                <a href="/calculatoare" routerLink="/calculatoare" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Calculatoare</span>
                 </a>
-                <a href="/product" routerLink="/product" class="list-group-item list-group-item-action py-2 ripple active">
+                <a href="/product" routerLink="/product" class="list-group-item list-group-item-action py-2 ripple ">
                     <i class="fas fa-users fa-fw me-3"></i><span>Produs</span></a>
 
                 <a href="/login" routerLink="/login" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
@@ -31,11 +31,19 @@
 
                 <a href="/register" routerLink="/register" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
                     <i class="fas fa-users fa-fw me-3"></i><span>Register</span></a>
-                
+
             </div>
         </div>
     </nav>
     <!-- Sidebar -->
+
+    <div class="input-group no-border">
+        <input type="text" value="" class="form-control" placeholder="Search...">
+        <button mat-raised-button type="submit" class="btn btn-white btn-round btn-just-icon">
+            <i class="material-icons">search</i>
+            <div class="ripple-container"></div>
+        </button>
+    </div>
 
     <!-- Navbar -->
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">

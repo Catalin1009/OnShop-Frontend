@@ -13,6 +13,12 @@
     transition: all 0.5s;
 }
 
+.page {
+    position: relative;
+    left: 240px;
+    margin-right: 240px;
+}
+
 .featured-item:hover {
     opacity: 0.9;
 }
