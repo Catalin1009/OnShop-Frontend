@@ -9,7 +9,7 @@ export class UsersService {
 
   getData()
   {
-    let url="https://localhost:7254/Produs";
+    let url="https://localhost:7254/produs/mostSold";
     return this.http.get(url);
   }
 }
