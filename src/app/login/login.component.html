@@ -8,13 +8,13 @@
     <div class="login-card">
         <h2>Login</h2>
         <h3>Enter your credentials</h3>
-        <form class="login-form">
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
+        <form class="login-form" [formGroup]="formdata"  (ngSubmit) ="sendForm(formdata.value)">
+            <input id="email" type="text" placeholder="Email" formControlName="email"  />
+            <input id="password" type="password" placeholder="Password" formControlName="password"/>
             <a href="#">
                     Forgot your password?
                 </a>
-            <button>LOGIN</button>
+            <input type = "submit" class = "formsubmit" value = "Log In">
         </form>
     </div>
 </body>
