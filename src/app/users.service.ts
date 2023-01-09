@@ -12,4 +12,10 @@ export class UsersService {
     let url="https://localhost:7254/produs/mostSold";
     return this.http.get(url);
   }
+  getProductByCategory(category)
+  {
+    let url="https://localhost:7254/produs/"+ category;
+    return this.http.get(url);
+  }
+  
 }

@@ -25,47 +25,43 @@
         <div id="1" class="item new col-md-3">
             <a href="single-product.html" class="t1">
                 <div class="featured-item">
-                    <!-- <img src="../../assets/{{images[0]}}" alt="fular"> -->
-                    <!-- <h4>{{names[0]}}</h4>
-                    <h6>{{prices[0]}} Lei</h6> -->
+                    <img src="../../assets/{{images[0]}}" alt="{{images[0]}}">
+                    <h4>{{names[0]}}</h4>
+                    <h6>{{prices[0]}} Lei</h6>
+                    <div *ngIf="stock[0] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
         </div>
         <div id="2" class="item high col-md-3">
             <a href="single-product.html">
                 <div class="featured-item">
-                    <!-- <img src="../../assets/{{images[1]}}" alt=""> -->
-                    <!-- <h4>{{names[1]}}</h4>
-                    <h6>{{prices[1]}} Lei</h6> -->
+                    <img src="../../assets/{{images[1]}}" alt="{{images[1]}}">
+                    <h4>{{names[1]}}</h4>
+                    <h6>{{prices[1]}} Lei</h6>
+                    <div *ngIf="stock[1] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
         </div>
         <div id="3" class="item low col-md-3">
             <a href="single-product.html">
                 <div class="featured-item">
-                    <!-- <img src="../../assets/{{images[2]}}" alt=""> -->
-                    <!-- <h4>{{names[2]}}</h4>
-                    <h6>{{prices[2]}} Lei</h6> -->
+                    <img src="../../assets/{{images[2]}}" alt="{{images[2]}}">
+                    <h4>{{names[2]}}</h4>
+                    <h6>{{prices[2]}} Lei</h6>
+                    <div *ngIf="stock[2] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
         </div>
         <div id="4" class="item low col-md-3">
             <a href="single-product.html">
                 <div class="featured-item">
-                    <!-- <img src="../../assets/{{images[3]}}" alt=""> -->
-                    <!-- <h4>{{names[3]}}</h4>
-                    <h6>${{prices[3]}} Lei</h6> -->
+                    <img src="../../assets/{{images[3]}}" alt="{{images[3]}}">
+                    <h4>{{names[3]}}</h4>
+                    <h6>${{prices[3]}} Lei</h6>
+                    <div *ngIf="stock[3] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
         </div>
-        <div id="5" class="item new high col-md-3">
-            <a href="single-product.html">
-                <div class="featured-item">
-                    <!-- <img src="../../assets/{{images[4]}}" alt=""> -->
-                    <!-- <h4>{{names[4]}}</h4>
-                    <h6>{{prices[4]}} Lei</h6> -->
-                </div>
-            </a>
-        </div>
+     
     </div>
 </div>
