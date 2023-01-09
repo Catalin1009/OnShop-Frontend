@@ -9,7 +9,7 @@ export class UsersService {
 
   getData()
   {
-    let url="https://jsonplaceholder.typicode.com/todos/";
+    let url="https://localhost:7254/Produs";
     return this.http.get(url);
   }
 }
