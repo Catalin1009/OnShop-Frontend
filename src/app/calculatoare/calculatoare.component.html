@@ -1,3 +1,5 @@
+
+
 <div class="page">
     <div class="featured-page">
         <div class="container">
@@ -19,11 +21,20 @@
             </div>
         </div>
     </div>
+    <div class = "slider">
+        <label>
+            <div class="info-min">
+              <p class="info-filtrare-pret">Preț minim:</p>
+              <span class="valueMin" id="infoRange_min" >0 lei</span>
+            </div>
+            <input type="range" id="inp-pret-min" value="0" min="0" max="6000" (input)="onInputChange($event)"/>
+          </label>
 
+    </div>
     <div class="featured container no-gutter">
 
     <div class="row posts gy-5">
-        <div id="1" class="item new col-md-3">
+        <div id="1" class="item new col-md-3" *ngIf="images[0]!=null">
             <a href="single-product.html" class="t1">
                 <div class="featured-item">
                     <img src="../../assets/{{images[0]}}" alt="">
@@ -33,7 +44,7 @@
                 </div>
             </a>
         </div>
-        <div id="2" class="item high col-md-3">
+        <div id="2" class="item high col-md-3" *ngIf="images[1]!=null">
             <a href="single-product.html">
                 <div class="featured-item">
                     <img src="../../assets/{{images[1]}}" alt="">
