@@ -9,6 +9,7 @@ import { ElectrocasniceComponent } from './electrocasnice/electrocasnice.compone
 import { JucariiComponent } from './jucarii/jucarii.component';
 import { TelevizoareComponent } from './televizoare/televizoare.component';
 import { ProductComponent } from './product';
+import { ShoppingcartComponent } from './shoppingcart';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'electrocasnice', component: ElectrocasniceComponent},
   { path: 'jucarii', component: JucariiComponent},
   { path: 'televizoare', component: TelevizoareComponent},
-  { path: 'product', component: ProductComponent}
+  { path: 'product', component: ProductComponent},
+  { path: 'shoppingcart', component: ShoppingcartComponent}
 ];
 
 @NgModule({
