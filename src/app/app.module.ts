@@ -17,6 +17,7 @@ import { CalculatoareComponent } from './calculatoare/calculatoare.component';
 import { ElectrocasniceComponent } from './electrocasnice/electrocasnice.component';
 import { JucariiComponent } from './jucarii/jucarii.component';
 import { ProductComponent } from './product/product.component';
+import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ProductComponent } from './product/product.component';
     CalculatoareComponent,
     ElectrocasniceComponent,
     JucariiComponent,
-    ProductComponent
+    ProductComponent,
+    ShoppingcartComponent
   ],
   imports: [
     BrowserModule,
