@@ -57,9 +57,21 @@
                             <!-- price-detail-wrap .// -->
                             <div *ngIf="getStoc() > 0 && isLogged() != ''; else elseBlock">
                             <div class="mb-4">
-                                <a href="#" class="btn btn-primary mr-1">Buy now</a>
-                                <a href="#" class="btn btn-light">Add to cart</a>
+                                <button class="btn btn-primary mr-1" (click)="addToCart()">Add To Cart</button>
+                                <div [ngClass]="{'hide-popup': !showPopup, 'popup': showPopup}"  *ngIf="showPopup" class="px-6 py-3 rounded-md inline-flex flex-row border pointer-events-auto flex rounded bg-primary text-center" role="alert" bis_skin_checked="1">
+                                    <div class="flex gap-2 text-white" bis_skin_checked="1">
+                                     <h2>Success!</h2>
+                                      <button (click)="showPopup = false">
+                                        <svg stroke="currentColor" fill="bg-primary" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" >
+                                          <line x1="18" y1="6" x2="6" y2="18"></line>
+                                          <line x1="6" y1="6" x2="18" y2="18"></line>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                </div>
                             </div>
+                             
+                            
                         </div>
                         <ng-template #elseBlock>Out of stock.</ng-template>
 
@@ -72,48 +84,7 @@
             </div>
             <!-- card-body.// -->
         </article>
-        <article class="card mt-5">
-            <div class="card-body">
-                <div class="row">
-                    <aside class="col-md-6">
-                        <h5>Parameters</h5>
-                        <dl class="row">
-                            <dt class="col-sm-3">Display</dt>
-                            <dd class="col-sm-9">13.3-inch LED-backlit display with IPS</dd>
 
-                            <dt class="col-sm-3">Processor</dt>
-                            <dd class="col-sm-9">2.3GHz dual-core Intel Core i5</dd>
-
-                            <dt class="col-sm-3">Camera</dt>
-                            <dd class="col-sm-9">720p FaceTime HD camera</dd>
-
-                            <dt class="col-sm-3">Memory</dt>
-                            <dd class="col-sm-9">8 GB RAM or 16 GB RAM</dd>
-
-                            <dt class="col-sm-3">Graphics</dt>
-                            <dd class="col-sm-9">Intel Iris Plus Graphics 640</dd>
-                        </dl>
-                    </aside>
-                    <aside class="col-md-6">
-                        <h5>Features</h5>
-                        <ul class="list-check">
-                            <li>Best performance of battery</li>
-                            <li>5 years warranty for this product</li>
-                            <li>Amazing features and high quality</li>
-                            <li>Best performance of battery</li>
-                            <li>5 years warranty for this product</li>
-                        </ul>
-                    </aside>
-                </div>
-                <!-- row.// -->
-                <hr>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <!-- card-body.// -->
-        </article>
     </div>
 
 

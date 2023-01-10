@@ -22,6 +22,48 @@ a:hover {
     text-decoration: none;
 }
 
+#popup {
+    position: fixed; /* Position fixed to center the popup on the screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Translate -50% on the x-axis and -50% on the y-axis to center the popup */
+    background-color: white; /* White background color */
+    padding: 20px; /* Add some padding to the content */
+    border-radius: 10px; /* Add some rounded corners */
+    box-shadow: 0px 0px 10px #aaaaaa; /* Add a subtle box shadow */
+    text-align: center; /* Center the text */
+}
+
+
+#popupContent {
+    color: black; /* Black text color */
+    font-size: 20px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+.popup {
+    transition: opacity 2s;
+  }
+
+  .hide-popup {
+    opacity: 0;
+  }
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Add rounded corners */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Add some padding to the modal */
+.modal-body {
+    padding: 20px;
+}
+
+
 .img-wrap {
     text-align: center;
     display: block;

@@ -6,29 +6,54 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  showPopup = false;
 
   getImage(){
-    console.log(window.localStorage.getItem("image"))
+   
     return window.localStorage.getItem("image")
   }
   getName(){
-    console.log(window.localStorage.getItem("image"))
+
     return window.localStorage.getItem("name")
   }
   getDescription(){
-    console.log(window.localStorage.getItem("image"))
+
     return window.localStorage.getItem("description")
   }
   getPrice(){
-    console.log(window.localStorage.getItem("price"))
+
     return window.localStorage.getItem("price")
   }
 
   getStoc(){
-    console.log(window.localStorage.getItem("price"))
+
     return parseInt(window.localStorage.getItem("stoc")!);
   }
   isLogged(){
     return window.localStorage.getItem("logat");
   }
+
+  addToCart(){
+    let products: { name: string, image: string }[] = [];
+  if(localStorage.getItem('products')){
+      products = JSON.parse(localStorage.getItem('products')!);
+  }
+  let name = window.localStorage.getItem("name")!
+  let image = window.localStorage.getItem("image")!
+  
+  products.push({ name, image });
+  console.log(products)
+  
+  localStorage.setItem('products', JSON.stringify(products));
+  this.showPopup = true;
+  setTimeout(() => {
+    this.showPopup = false;
+  }, 4000);
+
+  }
+  
+  closeModal() {
+    document.querySelector("#popupModal")!.classList.remove("show");
+    document.querySelector("#popupModal")!.removeAttribute("aria-modal");
+}
 }
