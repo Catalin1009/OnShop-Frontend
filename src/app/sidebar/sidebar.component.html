@@ -5,36 +5,37 @@
         <div class="position-sticky">
             <div class="list-group list-group-flush mx-3 mt-4">
 
-                <a href="/home" routerLink="/home" class="list-group-item list-group-item-action py-2 ripple active" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/home" routerLink="/home" class="list-group-item list-group-item-action py-2 ripple active" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Home</span>
                 </a>
-                <a href="/jucarii" routerLink="/jucarii" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/jucarii" routerLink="/jucarii" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Jucarii</span>
                 </a>
-                <a href="/haine" routerLink="/haine" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/haine" routerLink="/haine" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Haine</span>
                 </a>
-                <a href="/televizoare" routerLink="/televizoare" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/televizoare" routerLink="/televizoare" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Televizoare</span>
                 </a>
-                <a href="/electrocasnice" routerLink="/electrocasnice" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/electrocasnice" routerLink="/electrocasnice" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Electrocasnice</span>
                 </a>
-                <a href="/calculatoare" routerLink="/calculatoare" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/calculatoare" routerLink="/calculatoare" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-chart-area fa-fw me-3"></i><span>Calculatoare</span>
                 </a>
-                <a href="/product" routerLink="/product" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/product" routerLink="/product" class="list-group-item list-group-item-action py-2 ripple " routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-users fa-fw me-3"></i><span>Produs</span></a>
 
-                <a href="/login" routerLink="/login" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/login" routerLink="/login" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-users fa-fw me-3"></i><span>Login</span></a>
 
-                <a href="/register" routerLink="/register" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                <a href="/register" routerLink="/register" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="click()">
                     <i class="fas fa-users fa-fw me-3"></i><span>Register</span></a>
 
-                    <a href="/" routerLink="/" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="logOut()" >
+                    <a href="/home" routerLink="/home" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'" (click)="logOut()" >
                         <i class="fas fa-users fa-fw me-3"></i><span>LogOut</span></a>
-    
+                <a *ngIf="logat == 'moderator'" href="/moderator" routerLink="/moderator" class="list-group-item list-group-item-action py-2 ripple" routerLinkActive="active" aria-current="route.isActive ? 'true' : 'false'">
+                    <i class="fas fa-users fa-fw me-3"></i><span>Moderator</span></a>
 
             </div>
         </div>

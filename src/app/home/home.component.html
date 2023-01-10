@@ -42,7 +42,7 @@
 
         <div class="row posts gy-5">
             <div id="1" class="item new col-md-3">
-                <a href="single-product.html" class="t1">
+                <a href="single-product.html" >
                     <div class="featured-item">
                         <img src="../../assets/{{images[0]}}" alt="fular">
                         <h4>{{names[0]}}</h4>
@@ -91,6 +91,38 @@
 
 
     <!-- Featred Page Ends Here -->
+
+    <div class="featured-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <div class="line-dec"></div>
+                        <h1>Recently Viewed</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured container no-gutter">
+
+            <!-- Featred Page Ends Here -->
+            <div class="row posts gy-5">
+    
+        
+            <div id="{{i+1}}" class="item new col-md-3" *ngFor="let product of products; let i = index">
+                <a href="single-product.html" >
+                    <div class="featured-item">
+                        <img src="assets/{{product.image}}" class="img-thumbnail">
+                        <h4>{{product.name}}</h4>
+                        <h6>{{product.price}} Lei</h6>
+                    </div>
+                </a>
+            </div>
+ 
+    </div>
+    </div>
 
     <!-- Subscribe Form Starts Here -->
     <div class="subscribe-form">

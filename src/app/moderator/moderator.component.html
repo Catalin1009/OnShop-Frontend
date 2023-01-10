@@ -1,0 +1,45 @@
+<div  *ngIf="logat == 'moderator'" class="moderator-panel">
+    <h2>Product Management</h2>
+    <div class="add-product-section">
+        <h3>Add a new product</h3>
+        <form>
+            <label>Id: <input type="number" [(ngModel)]="newProduct.id" name="id"></label><br>
+            <label>Name: <input type="text" [(ngModel)]="newProduct.name" name="name"></label><br>
+            <label>Description: <input type="text" [(ngModel)]="newProduct.description" name="description"></label><br>
+            <label>Price: <input type="number" [(ngModel)]="newProduct.price" name="price"></label><br>
+            <label>Image: <input type="text" [(ngModel)]="newProduct.image" name="image"></label><br>
+            <label>Category: <input type="text" [(ngModel)]="newProduct.category" name="category"></label><br>
+            <label>Size: <input type="text" [(ngModel)]="newProduct.size" name="size"></label><br>
+            <label>Stock: <input type="number" [(ngModel)]="newProduct.stock" name="stock"></label><br>
+            <label>Is imported: <input type="boolean" [(ngModel)]="newProduct.is_imported" name="is_imported"></label><br>
+            <label>Color: <input type="text" [(ngModel)]="newProduct.color" name="color"></label><br>
+            <label>Sold: <input type="number" [(ngModel)]="newProduct.sold" name="sold"></label><br>
+            <button (click)="addProduct()">Add Product</button>
+        </form>
+    </div>
+<br><br>
+    <div class="edit-product-section">
+        <h3>Edit a product</h3>
+        <form>
+            <label>Id: <input type="number" [(ngModel)]="newProduct.id" name="id"></label><br>
+            <label>Name: <input type="text" [(ngModel)]="newProduct.name" name="name"></label><br>
+            <label>Description: <input type="text" [(ngModel)]="newProduct.description" name="description"></label><br>
+            <label>Price: <input type="number" [(ngModel)]="newProduct.price" name="price"></label><br>
+            <label>Image: <input type="text" [(ngModel)]="newProduct.image" name="image"></label><br>
+            <label>Category: <input type="text" [(ngModel)]="newProduct.category" name="category"></label><br>
+            <label>Size: <input type="text" [(ngModel)]="newProduct.size" name="size"></label><br>
+            <label>Stock: <input type="number" [(ngModel)]="newProduct.stock" name="stock"></label><br>
+            <label>Is imported: <input type="boolean" [(ngModel)]="newProduct.is_imported" name="is_imported"></label><br>
+            <label>Color: <input type="text" [(ngModel)]="newProduct.color" name="color"></label><br>
+            <label>Sold: <input type="number" [(ngModel)]="newProduct.sold" name="sold"></label><br>
+            <button (click)="editProduct()">Edit Product</button>
+        </form>
+    </div>
+    <div class="remove-product-section">
+        <h3>Remove a product</h3>
+        <form>
+            <label>Product ID: <input type="number" [(ngModel)]="newProduct.id" name="id"></label>
+            <button (click)="removeProduct()">Remove Product</button>
+        </form>
+    </div>
+</div>

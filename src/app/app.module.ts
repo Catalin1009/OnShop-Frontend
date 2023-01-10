@@ -18,6 +18,7 @@ import { ElectrocasniceComponent } from './electrocasnice/electrocasnice.compone
 import { JucariiComponent } from './jucarii/jucarii.component';
 import { ProductComponent } from './product/product.component';
 import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
+import { ModeratorComponent } from './moderator/moderator.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ShoppingcartComponent } from './shoppingcart/shoppingcart.component';
     ElectrocasniceComponent,
     JucariiComponent,
     ProductComponent,
-    ShoppingcartComponent
+    ShoppingcartComponent,
+    ModeratorComponent
   ],
   imports: [
     BrowserModule,

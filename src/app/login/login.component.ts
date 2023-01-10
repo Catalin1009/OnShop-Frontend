@@ -2,6 +2,7 @@ import { Component, NgModule } from '@angular/core';
 import { HttpClient, HttpContext, HttpHeaders } from '@angular/common/http';
 import { FormsModule, NgForm,FormGroup, FormControl} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,11 @@ export class LoginComponent {
     email: new FormControl(),
     password: new FormControl()
  });
-  constructor(private http: HttpClient) { 
+ loggedIn;
+
+
+  constructor(private http: HttpClient, public router:Router) { 
+    this.loggedIn=window.localStorage.getItem("logat");
     }
 
   sendForm(data){
@@ -36,5 +41,10 @@ export class LoginComponent {
       }
 });
     this.formdata.reset();
+
+    this.loggedIn=window.localStorage.getItem("logat");
+    
   }
+
+ 
 }

@@ -1,6 +1,7 @@
 
-<div class = "page">
-    <div class="login-card">
+<div class = "page" >
+    <div class="login-card" >
+        <div *ngIf="loggedIn == '';else elseBlock ">
         <h2>Login</h2>
         <h3>Enter your credentials</h3>
         <form class="login-form" [formGroup]="formdata"  (ngSubmit) ="sendForm(formdata.value)">
@@ -9,7 +10,10 @@
             <a href="#">
                     Forgot your password?
                 </a>
-            <input type = "submit" class = "formsubmit" value = "Log In">
+            <input type = "submit" class = "formsubmit" value = "Log In" >
         </form>
+    </div>
+
+    <ng-template #elseBlock>Already logged in as: {{loggedIn}}</ng-template>
     </div>
 </div>

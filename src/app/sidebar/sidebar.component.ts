@@ -8,10 +8,19 @@ import { RouterModule, Routes,ActivatedRoute } from '@angular/router';
 })
 export class SidebarComponent {
   route;
-  constructor( route: ActivatedRoute) { }
+  logat;
+  constructor( route: ActivatedRoute) { this.logat = window.localStorage.getItem("logat") }
 
   logOut(){
+   
     window.localStorage.setItem("logat", "")
+    this.logat = window.localStorage.getItem("logat")
+    window.localStorage.setItem("products", "")
+    window.localStorage.setItem("recentlyViewed", "")
     return true;
+  }
+
+  click(){
+    this.logat = window.localStorage.getItem("logat")
   }
 }

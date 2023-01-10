@@ -6,6 +6,7 @@ import {UsersService} from '../users.service'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  products: { name: string, image: string, size: number , price: number}[] = [];
   images: string[] = [];
   names: string[] = [];  
   prices: string[] = [];
@@ -19,5 +20,14 @@ export class HomeComponent {
       });
       console.warn(this.images);
     })
+    if(localStorage.getItem('recentlyViewed')){
+      this.products = JSON.parse(localStorage.getItem('recentlyViewed')!);
+  }
+  }
+
+  getRecentlyViewed(){
+    
+  
+    
   }
 }
