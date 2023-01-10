@@ -13,6 +13,7 @@ export class HaineComponent {
   stock: number[] = [];
   imported:boolean[]=[];
   sizes:string[] =[];
+  descriptions:string[]=[];
   elem_min: HTMLInputElement = (null as any);
   elem_price: any;
   elem_checkbox:HTMLInputElement = (null as any);
@@ -30,6 +31,7 @@ export class HaineComponent {
         this.stock.push((element as any).stock)
         this.imported.push((element as any).is_imported)
         this.sizes.push((element as any).size)
+        this.descriptions.push((element as any).description)
         console.log((element as any).is_imported)
       });
       console.warn(this.images);
@@ -38,6 +40,7 @@ export class HaineComponent {
   ngOnInit(){
     this.elem_checkbox = document.querySelector("#is_imported")!;
     this.elem_dropdown = document.querySelector("#size")!;
+    
   }
   onInputChange(event: any) {
     console.log(this.sizes)
@@ -54,5 +57,12 @@ export class HaineComponent {
   
   target.innerHTML = `${newValue} lei`;
   
+  }
+  onPageChange(i){
+    console.log(this.images[i])
+    window.localStorage.setItem("image",this.images[i]);
+    window.localStorage.setItem("name", this.names[i]);
+    window.localStorage.setItem("description", this.descriptions[i]);
+    window.localStorage.setItem("price", this.prices[i]);
   }
 }

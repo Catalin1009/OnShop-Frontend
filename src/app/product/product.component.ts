@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
+  getImage(){
+    console.log(window.localStorage.getItem("image"))
+    return window.localStorage.getItem("image")
+  }
+  getName(){
+    console.log(window.localStorage.getItem("image"))
+    return window.localStorage.getItem("name")
+  }
+  getDescription(){
+    console.log(window.localStorage.getItem("image"))
+    return window.localStorage.getItem("description")
+  }
+  getPrice(){
+    console.log(window.localStorage.getItem("price"))
+    return window.localStorage.getItem("price")
+  }
 }

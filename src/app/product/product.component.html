@@ -7,7 +7,7 @@
                     <aside class="col-md-6">
                         <article class="gallery-wrap">
                             <div class="card img-big-wrap">
-                                <a href="#"> <img src="assets/images/items/3.jpg"></a>
+                                <a href="#"> <img src="../../assets/{{getImage()}}"></a>
                             </div>
                             <!-- card img-big-wrap.// -->
                             <div class="thumbs-wrap">
@@ -25,7 +25,7 @@
                             <a href="/haine" routerLink="/haine" class="list-group-item list-group-item-action py-2 ripple active">
                                 <i class="fas fa-chart-area fa-fw me-3"></i><span>Haine</span>
                             </a>
-                            <h3 class="title">Great product name goes here</h3>
+                            <h3 class="title">{{getName()}}</h3>
                             <div>
                                 <ul class="rating-stars">
                                     <li class="stars-active">
@@ -45,25 +45,20 @@
                             <hr>
 
                             <div class="mb-3">
-                                <h6>Short description</h6>
-                                <ul class="list-dots mb-0">
-                                    <li>Made in Russia</li>
-                                    <li>Wolf leather </li>
-                                    <li>Rubber material bottom</li>
-                                    <li>Dark blue color</li>
-                                </ul>
+                                <h6>{{getDescription()}}</h6>
+                                
                             </div>
 
 
                             <div class="mb-3">
-                                <var class="price h4">$230.00</var> <br>
+                                <var class="price h4">{{getPrice()}} Lei</var> <br>
 
                             </div>
                             <!-- price-detail-wrap .// -->
 
                             <div class="mb-4">
                                 <a href="#" class="btn btn-primary mr-1">Buy now</a>
-                                <a href="#" class="btn btn-light">Add to card</a>
+                                <a href="#" class="btn btn-light">Add to cart</a>
                             </div>
 
                         </article>

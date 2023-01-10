@@ -45,7 +45,7 @@
     <div class="row posts gy-5">
         <div id="1" class="item new col-md-3" *ngIf="(imported[0] == true && elem_checkbox.checked || imported[0] == false && !elem_checkbox.checked ) && prices[0]>elem_price &&sizes[0] == elem_dropdown.value">
    
-            <a href="single-product.html" class="t1">
+              <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(0)">
                 <div class="featured-item">
                     <img src="../../assets/{{images[0]}}" alt="{{images[0]}}">
                     <h4>{{names[0]}}</h4>
@@ -57,7 +57,7 @@
     </div>
     <div  id="2" class="item high col-md-3" *ngIf=" (imported[1] == true && elem_checkbox.checked || imported[1] == false && !elem_checkbox.checked ) && prices[1]>elem_price && sizes[1] == elem_dropdown.value">
        
-            <a href="single-product.html">
+        <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(1)">
                 <div class="featured-item">
                     <img src="../../assets/{{images[1]}}" alt="{{images[1]}}">
                     <h4>{{names[1]}}</h4>
@@ -69,7 +69,7 @@
         </div>
         <div id="3" class="item low col-md-3" *ngIf="( imported[2] == true && elem_checkbox.checked || imported[2] == false && !elem_checkbox.checked ) && prices[2]>elem_price && sizes[2] == elem_dropdown.value">
      
-            <a href="single-product.html">
+            <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(2)">
                 <div class="featured-item">
                     <img src="../../assets/{{images[2]}}" alt="{{images[2]}}">
                     <h4>{{names[2]}}</h4>
@@ -80,7 +80,7 @@
      </div>
         <div id="4" class="item low col-md-3" *ngIf="(imported[3] == true && elem_checkbox.checked || imported[3] == false && !elem_checkbox.checked) && prices[3]>elem_price && sizes[3] == elem_dropdown.value">
 
-            <a href="single-product.html">
+            <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(3)">
                 <div class="featured-item">
                     <img src="../../assets/{{images[3]}}" alt="{{images[3]}}">
                     <h4>{{names[3]}}</h4>
