@@ -34,7 +34,7 @@
     <div class="featured container no-gutter">
 
     <div class="row posts gy-5">
-        <div id="1" class="item new col-md-3" *ngIf="images[0]!=null">
+        <div id="1" class="item new col-md-3" *ngIf="prices[0]>elem_price">
             <a href="single-product.html" class="t1">
                 <div class="featured-item">
                     <img src="../../assets/{{images[0]}}" alt="">
@@ -44,7 +44,7 @@
                 </div>
             </a>
         </div>
-        <div id="2" class="item high col-md-3" *ngIf="images[1]!=null">
+        <div id="1" class="item new col-md-3" *ngIf="prices[1]>elem_price">
             <a href="single-product.html">
                 <div class="featured-item">
                     <img src="../../assets/{{images[1]}}" alt="">

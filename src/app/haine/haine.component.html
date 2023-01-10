@@ -19,11 +19,32 @@
             </div>
         </div>
     </div>
+    <div class = "filters">
+    <div class = "slider">
+        <label>
+            <div class="info-min">
+              <p class="info-filtrare-pret">Preț minim:</p>
+              <span class="valueMin" id="infoRange_min" >0 lei</span>
+            </div>
+            <input type="range" id="inp-pret-min" value="0" min="0" max="6000" (input)="onInputChange($event)"/>
+          </label> 
+          <select name="size" id="size" (input)="onInputChange($event)">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
 
+    </div>
+    <div class="checkBox" >
+    <input type="checkbox" id="is_imported" name="is_imported" value="imported" (input)="onInputChange($event)" />
+    <label for="is_imported">Imported</label>
+  </div>
+</div>
     <div class="featured container no-gutter">
 
     <div class="row posts gy-5">
-        <div id="1" class="item new col-md-3">
+        <div id="1" class="item new col-md-3" *ngIf="(imported[0] == true && elem_checkbox.checked || imported[0] == false && !elem_checkbox.checked ) && prices[0]>elem_price &&sizes[0] == elem_dropdown.value">
+   
             <a href="single-product.html" class="t1">
                 <div class="featured-item">
                     <img src="../../assets/{{images[0]}}" alt="{{images[0]}}">
@@ -32,8 +53,10 @@
                     <div *ngIf="stock[0] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
-        </div>
-        <div id="2" class="item high col-md-3">
+    
+    </div>
+    <div  id="2" class="item high col-md-3" *ngIf=" (imported[1] == true && elem_checkbox.checked || imported[1] == false && !elem_checkbox.checked ) && prices[1]>elem_price && sizes[1] == elem_dropdown.value">
+       
             <a href="single-product.html">
                 <div class="featured-item">
                     <img src="../../assets/{{images[1]}}" alt="{{images[1]}}">
@@ -42,8 +65,10 @@
                     <div *ngIf="stock[1] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
+      
         </div>
-        <div id="3" class="item low col-md-3">
+        <div id="3" class="item low col-md-3" *ngIf="( imported[2] == true && elem_checkbox.checked || imported[2] == false && !elem_checkbox.checked ) && prices[2]>elem_price && sizes[2] == elem_dropdown.value">
+     
             <a href="single-product.html">
                 <div class="featured-item">
                     <img src="../../assets/{{images[2]}}" alt="{{images[2]}}">
@@ -52,8 +77,9 @@
                     <div *ngIf="stock[2] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
-        </div>
-        <div id="4" class="item low col-md-3">
+     </div>
+        <div id="4" class="item low col-md-3" *ngIf="(imported[3] == true && elem_checkbox.checked || imported[3] == false && !elem_checkbox.checked) && prices[3]>elem_price && sizes[3] == elem_dropdown.value">
+
             <a href="single-product.html">
                 <div class="featured-item">
                     <img src="../../assets/{{images[3]}}" alt="{{images[3]}}">
@@ -62,6 +88,7 @@
                     <div *ngIf="stock[3] == 0 " style="color: black; ">Out of stock</div>
                 </div>
             </a>
+    
         </div>
      
     </div>

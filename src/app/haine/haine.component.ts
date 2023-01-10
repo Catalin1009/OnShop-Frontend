@@ -11,8 +11,16 @@ export class HaineComponent {
   names: string[] = [];  
   prices: string[] = [];
   stock: number[] = [];
-
+  imported:boolean[]=[];
+  sizes:string[] =[];
+  elem_min: HTMLInputElement = (null as any);
+  elem_price: any;
+  elem_checkbox:HTMLInputElement = (null as any);
+  elem_dropdown: HTMLInputElement = (null as any);
   constructor(private user:UsersService){
+    this.elem_checkbox;
+    this.elem_price=0;
+    this.elem_dropdown;
     this.user.getProductByCategory("Haine").subscribe(data=>{
       console.warn(data);
       (data as any).forEach(element => {
@@ -20,8 +28,31 @@ export class HaineComponent {
         this.names.push((element as any).name)
         this.prices.push((element as any).price)
         this.stock.push((element as any).stock)
+        this.imported.push((element as any).is_imported)
+        this.sizes.push((element as any).size)
+        console.log((element as any).is_imported)
       });
       console.warn(this.images);
     })
+  }
+  ngOnInit(){
+    this.elem_checkbox = document.querySelector("#is_imported")!;
+    this.elem_dropdown = document.querySelector("#size")!;
+  }
+  onInputChange(event: any) {
+    console.log(this.sizes)
+    this.elem_dropdown = document.querySelector("#size")!;
+    this.elem_checkbox = document.querySelector("#is_imported")!;
+    console.log(this.imported[2]);
+    this.elem_min = document.querySelector('#inp-pret-min')! ;
+    let target = document.querySelector('#infoRange_min')!;
+    let newValue = this.elem_min.value;
+   
+    newValue = this.elem_min.value;
+    target = document.querySelector('#infoRange_min')!;
+    this.elem_price = newValue
+  
+  target.innerHTML = `${newValue} lei`;
+  
   }
 }
