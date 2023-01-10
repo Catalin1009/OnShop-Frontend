@@ -6,8 +6,16 @@
     padding-left: 50vh;
     padding-right: 50vh;
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pan 6s infinite alternate linear;
 }
 
+@keyframes pan {
+    100% {
+        background-position: 15% 30%;
+    }
+}
 .container {
     display: grid;
     place-items: center;

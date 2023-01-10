@@ -23,4 +23,12 @@ export class ProductComponent {
     console.log(window.localStorage.getItem("price"))
     return window.localStorage.getItem("price")
   }
+
+  getStoc(){
+    console.log(window.localStorage.getItem("price"))
+    return parseInt(window.localStorage.getItem("stoc")!);
+  }
+  isLogged(){
+    return window.localStorage.getItem("logat");
+  }
 }

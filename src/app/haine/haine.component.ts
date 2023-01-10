@@ -64,5 +64,7 @@ export class HaineComponent {
     window.localStorage.setItem("name", this.names[i]);
     window.localStorage.setItem("description", this.descriptions[i]);
     window.localStorage.setItem("price", this.prices[i]);
+    window.localStorage.setItem("stoc", this.stock[i].toString());
   }
+
 }

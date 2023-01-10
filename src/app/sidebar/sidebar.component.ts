@@ -9,4 +9,9 @@ import { RouterModule, Routes,ActivatedRoute } from '@angular/router';
 export class SidebarComponent {
   route;
   constructor( route: ActivatedRoute) { }
+
+  logOut(){
+    window.localStorage.setItem("logat", "")
+    return true;
+  }
 }

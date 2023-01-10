@@ -4,11 +4,13 @@
     <div class="register-card">
         <h2>Register</h2>
         <h3>Enter your credentials</h3>
-        <form class="register-form">
-            <input type="text" placeholder="Name & Surname" />
-            <input type="email" placeholder="E-mail" />
-            <input type="text" placeholder="Username" />
-            <input type="password" placeholder="Password" />
+        <form class="register-form" [formGroup]="formdata"  (ngSubmit) ="sendForm(formdata.value)">
+            <input id="nume" type="nume" placeholder="Nume" formControlName="nume"/>
+            <input id="prenume" type="prenume" placeholder="Prenume" formControlName="prenume"/>
+            <input  id="email" type="text" placeholder="Email" formControlName="email"/>
+            <input id="username" type="username" placeholder="Username" formControlName="username"/>
+            <input id="parola" type="parola" placeholder="Password" formControlName="parola"/>
+
             <button>REGISTER</button>
         </form>
     </div>

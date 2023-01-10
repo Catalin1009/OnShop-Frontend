@@ -55,11 +55,13 @@
 
                             </div>
                             <!-- price-detail-wrap .// -->
-
+                            <div *ngIf="getStoc() > 0 && isLogged() != ''; else elseBlock">
                             <div class="mb-4">
                                 <a href="#" class="btn btn-primary mr-1">Buy now</a>
                                 <a href="#" class="btn btn-light">Add to cart</a>
                             </div>
+                        </div>
+                        <ng-template #elseBlock>Out of stock.</ng-template>
 
                         </article>
                         <!-- product-info-aside .// -->

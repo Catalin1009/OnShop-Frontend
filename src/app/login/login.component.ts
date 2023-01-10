@@ -23,8 +23,14 @@ export class LoginComponent {
     const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded').set('email', data.email).set('password', data.password);
     console.warn(data)
     this.http.post('https://localhost:7254/login', null, { headers: headers }).subscribe(response => {
+      console.log(response)
       if(response!=null){
-       console.log("Yay, te-ai logat")
+       
+        
+        console.log(response['rol'])
+       window.localStorage.setItem("logat", response['rol']);
+
+       
       }else{
         console.log("Ai uitat parola?")
       }
