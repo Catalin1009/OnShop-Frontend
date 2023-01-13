@@ -24,7 +24,7 @@
 
     <div class="row posts gy-5">
         <div id="1" class="item new col-md-3">
-            <a href="single-product.html" class="t1">
+            <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(0)">
                 <div *ngIf="stock[0] == 0 ">Not available</div>
                 <div class="featured-item" >
                     <img src="../../assets/{{images[0]}}" alt="{{images[0]}}" >
@@ -35,7 +35,7 @@
             </a>
         </div>
         <div id="2" class="item high col-md-3">
-            <a href="single-product.html">
+            <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(1)">
                 <div *ngIf="stock[1] == 0 ">Not available</div>
                 <div class="featured-item">
                     <img src="../../assets/{{images[1]}}" alt="{{images[1]}}">
@@ -45,7 +45,7 @@
             </a>
         </div>
         <div id="3" class="item low col-md-3">
-            <a href="single-product.html">
+            <a href="/product" routerLink="/product" class="t1" (click)="onPageChange(2)">
                 
                     <div class="featured-item">
                         <img src="../../assets/{{images[2]}}" alt="{{images[2]}}">

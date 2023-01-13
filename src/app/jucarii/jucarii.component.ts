@@ -11,6 +11,7 @@ export class JucariiComponent {
   names: string[] = [];  
   prices: string[] = [];
   stock: number[] = [];
+  descriptions:string[]=[];
 
   constructor(private user:UsersService){
     this.user.getProductByCategory("Jucarii").subscribe(data=>{
@@ -20,8 +21,18 @@ export class JucariiComponent {
         this.names.push((element as any).name)
         this.prices.push((element as any).price)
         this.stock.push((element as any).stock)
+        this.descriptions.push((element as any).description)
       });
       console.warn(this.images);
     })
+  }
+
+  onPageChange(i){
+    console.log(this.images[i])
+    window.localStorage.setItem("image",this.images[i]);
+    window.localStorage.setItem("name", this.names[i]);
+    window.localStorage.setItem("description", this.descriptions[i]);
+    window.localStorage.setItem("price", this.prices[i]);
+    window.localStorage.setItem("stoc", this.stock[i].toString());
   }
 }
